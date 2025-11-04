@@ -1,4 +1,3 @@
-
 import React from 'react';
 import type { Camera } from '../types';
 import { MD15342X1Camera, GenericWideCamera, WLF01Camera } from './icons';
@@ -25,10 +24,6 @@ const CameraVisual: React.FC<{ modelName: string; isSelected: boolean }> = ({ mo
 const CameraView: React.FC<CameraViewProps> = ({ cameras, selectedCameraId, onSelectCamera }) => {
   return (
     <div className="w-full h-full relative border-2 border-dashed border-gray-600 rounded-md bg-black">
-      {/* Subtle grid lines */}
-      <div className="absolute top-1/2 left-1/2 w-px h-full bg-gray-800 -translate-x-1/2"></div>
-      <div className="absolute top-1/2 left-1/2 h-px w-full bg-gray-800 -translate-y-1/2"></div>
-
       <div className="absolute top-1/2 left-1/2 transform-gpu">
         {cameras.map((camera) => (
           <div
